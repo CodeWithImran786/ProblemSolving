@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>async & await functions</h1>
+    <script>
+
+          function getData(num){
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    console.log("Getting Data.....",num);
+                    resolve("Success");
+                },4000);
+            });
+        }
+
+        // async function getMoreData(){
+        //     await getData(1);
+        //     await getData(2);
+        //     await getData(3);
+        //     await getData(4);
+        //     await getData(5);
+
+
+        // }
+
+
+        //IIFE == Immediately Invoked function expression
+        //yaa  function hai immediately call ho jyta hai jesa he yaa define hota hai
+   
+   
+
+            (async function (){
+            await getData(1);
+            await getData(2);
+            await getData(3);
+            await getData(4);
+            await getData(5);
+
+
+        }) ();//() yaa jesa he lakha gaa automatically fn call ho jya gaa
+
+   
+
+
+
+
+   
+   
+   </script>
+</body>
+</html>
